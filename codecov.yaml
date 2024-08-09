@@ -2,3 +2,4 @@ ignore:
   - "zz_generated*.*"
   - "mage/"
   - "magefile.go"
+  - "mocks"
