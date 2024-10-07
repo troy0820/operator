@@ -600,7 +600,9 @@ func (r *AgentActionReconciler) resolvePorterConfig(ctx context.Context, log log
 	if err != nil {
 		return porterv1.PorterConfigSpec{}, err
 	}
-
+	// TODO: Create grpc deployment from here if and only if it does not exist.
+	// We will call marshal the porterConfig to a string value to then be the config we are going to use for the grpc deployment
+	// which should have the namespace, etc already.
 	return cfg, nil
 }
 
